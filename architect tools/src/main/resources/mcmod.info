@@ -1,0 +1,16 @@
+[
+{
+  "modid": "arctools",
+  "name": "Architect Tools",
+  "description": "A converter between worldedit and schmatica.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["NylaOfArda"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
