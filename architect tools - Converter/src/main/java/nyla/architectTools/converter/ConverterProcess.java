@@ -3,6 +3,7 @@ package nyla.architectTools.converter;
 import java.io.File;
 import java.io.IOException;
 
+import nyla.architectTools.ArcToolsMod;
 import nyla.architectTools.util.NylaNBTUtil;
 import net.minecraft.nbt.NBTTagCompound;
 
@@ -23,7 +24,7 @@ public class ConverterProcess {
 			
 			util.schematicaToWE_addBlocks(addBlocks);
 
-			NylaNBTUtil.saveNamedNBTToFile(new File(outputDir + "\\" + outputName + fileType), fileStruct, "Schematic");
+			NylaNBTUtil.saveNamedNBTToFile(new File(outputDir + "\\" + outputName), fileStruct, "Schematic");
 			
 			debuger = "";
 			
@@ -37,6 +38,11 @@ public class ConverterProcess {
 		}
 		return debuger;
 		
+	}
+	
+	public static void convertLogic(File inputFile, File outputFile) {
+		convertLogic(inputFile, ArcToolsMod.worldeditFolderLoc.toString(), outputFile.getName());
+	
 	}
 
 }

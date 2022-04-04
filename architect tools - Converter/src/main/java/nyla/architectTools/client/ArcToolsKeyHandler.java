@@ -10,7 +10,9 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
+import net.minecraft.util.ChatComponentText;
 import nyla.architectTools.ArcToolsMod;
+import nyla.architectTools.client.gui.ConverterGUI;
 
 public class ArcToolsKeyHandler {
 	
@@ -27,7 +29,9 @@ public class ArcToolsKeyHandler {
 	@SubscribeEvent
 	public void KeyInputEvent(InputEvent.KeyInputEvent event) {
 		if(keyBindOpenConverter.isPressed()) {
-			mc.thePlayer.openGui(ArcToolsMod.instance, 36, mc.theWorld, 0, 0, 0);
+			//mc.thePlayer.sendChatMessage("I was pressed");
+			mc.thePlayer.addChatComponentMessage(new ChatComponentText("Converter Gui opened"));
+			ArcToolsMod.proxy.openMyGui();
 		}
 	}
 	

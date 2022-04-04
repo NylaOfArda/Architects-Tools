@@ -1,0 +1,19 @@
+-> create folder "Converted Schematics"
+
+-> Command:
+	\convert_schem <target file name> [output name]
+	
+	-> if target file not found:
+		"Could not find target file"
+		
+	-> if output name is already taken
+		"A converted file with this name already exists. Saving as [name] + [count]
+	
+====	
+
+	-> Success message
+	
+	-> support for spaced string and ""
+	
+	-> Save directly into WorldEdit/config/schematics
+
